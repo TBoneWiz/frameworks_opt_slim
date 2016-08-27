@@ -171,6 +171,12 @@
                 android:summaryOn="@string/volume_keys_control_media_stream_on_summary"
                 android:summaryOff="@string/volume_keys_control_media_stream_off_summary" />
 
+            <org.slim.preference.SlimSystemSettingSwitchPreference
+                android:key="swap_volume_keys_on_rotation"
+                android:title="@string/swap_volume_buttons_title"
+                android:defaultValue="false"
+                android:summary="@string/swap_volume_buttons_summary" />
+
 		</PreferenceCategory>
 
 </PreferenceScreen>
