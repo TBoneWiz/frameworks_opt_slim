@@ -507,4 +507,10 @@
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when screen is rotated</string>
 
+    <!-- Advanced media controls -->
+    <string name="advanced_media_controls">Advanced media controls</string>
+    <string name="bt_absolute_volume_control">BT Absolute volume control</string>
+    <string name="bt_absolute_volume_control_on_summary">Volume keys control BT Absolute volume</string>
+    <string name="bt_absolute_volume_control_off_summary">Volume keys control Media volume</string>
+
 </resources>

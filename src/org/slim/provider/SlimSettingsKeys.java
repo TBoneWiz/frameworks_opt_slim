@@ -561,6 +561,15 @@ public final class SlimSettingsKeys {
     }
 
     public interface Global {
+
+        /**
+         * Setting to turn off BT Absolute Volume control.
+         *
+         * @hide
+         */
+        public static final String
+                BT_ABS_VOLUME_CTRL_ENABLED = "bt_abs_vol_ctrl_enabled";
+
     }
 
 }
