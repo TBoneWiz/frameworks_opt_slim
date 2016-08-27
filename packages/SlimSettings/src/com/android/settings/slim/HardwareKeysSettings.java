@@ -85,6 +85,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_MENU = "button_keys_menu";
     private static final String CATEGORY_ASSIST = "button_keys_assist";
     private static final String CATEGORY_APPSWITCH = "button_keys_appSwitch";
+    private static final String CATEGORY_VOLUME = "button_keys_volume";
 
     private static final String KEYS_CATEGORY_BINDINGS = "keys_bindings";
     private static final String KEYS_ENABLE_CUSTOM = "enable_hardware_rebind";
@@ -124,6 +125,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
     private static final int KEY_MASK_ASSIST     = 0x08;
     private static final int KEY_MASK_APP_SWITCH = 0x10;
     private static final int KEY_MASK_CAMERA     = 0x20;
+	private static final int KEY_MASK_VOLUME     = 0x40;
 
     private SwitchPreference mEnableHwKeys;
     private SwitchPreference mEnableCustomBindings;
@@ -189,6 +191,7 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
         boolean hasAssistKey = (deviceKeys & KEY_MASK_ASSIST) != 0;
         boolean hasAppSwitchKey = (deviceKeys & KEY_MASK_APP_SWITCH) != 0;
         boolean hasCameraKey = (deviceKeys & KEY_MASK_CAMERA) != 0;
+        boolean hasVolumeRocker = (deviceKeys & KEY_MASK_VOLUME) != 0;
 
         PreferenceCategory keysCategory =
                 (PreferenceCategory) prefs.findPreference(CATEGORY_KEYS);
@@ -204,6 +207,8 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                 (PreferenceCategory) prefs.findPreference(CATEGORY_ASSIST);
         PreferenceCategory keysAppSwitchCategory =
                 (PreferenceCategory) prefs.findPreference(CATEGORY_APPSWITCH);
+        PreferenceCategory volumeCategory =
+                (PreferenceCategory) prefs.findPreference(CATEGORY_VOLUME);
 
         ButtonBacklightBrightness backlight = (ButtonBacklightBrightness)
                 prefs.findPreference(KEY_BUTTON_BACKLIGHT);
@@ -367,6 +372,10 @@ public class HardwareKeysSettings extends SettingsPreferenceFragment implements
                     SlimSettings.System.KEY_APP_SWITCH_DOUBLE_TAP_ACTION);
         } else {
             prefs.removePreference(keysAppSwitchCategory);
+        }
+        if (!hasVolumeRocker) {
+            // Hide Volume key options on devices without hw volume keys
+            prefs.removePreference(volumeCategory);
         }
 
         boolean enableHardwareRebind = SlimSettings.System.getInt(getContentResolver(),

@@ -328,7 +328,7 @@
     <string name="keys_action_long">Long press</string>
     <string name="keys_action_double">Double tap</string>
     <string name="no_home_key">You have no button assigned any more to the \"Home\" action!\n\nThis can make your device unusable!</string>
-
+ 
     <!-- Slim Shortcuts -->
     <string name="slim_shortcut_picker">Slim Actions</string>
     <string name="shortcut_action_select_action">Choose action:</string>
@@ -498,5 +498,11 @@
     <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="advanced_options_settings_title">Advanced</string>
     <string name="device_settings_title">Device Specific Settings</string>
+
+    <!-- Volume key actions -->
+    <string name="keys_volume_key_title">Volume key actions</string>
+    <string name="volume_keys_control_media_stream">Media volume control</string>
+    <string name="volume_keys_control_media_stream_on_summary">Volume keys control media volume</string>
+    <string name="volume_keys_control_media_stream_off_summary">Volume keys control notifications volume</string>
 
 </resources>

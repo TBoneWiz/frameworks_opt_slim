@@ -160,4 +160,17 @@
                 android:dependency="enable_hardware_rebind" />
         </PreferenceCategory>
 
+        <PreferenceCategory
+            android:key="button_keys_volume"
+            android:title="@string/keys_volume_key_title">
+
+            <org.slim.preference.SlimSystemSettingSwitchPreference
+                android:key="volume_keys_control_media_stream"
+                android:title="@string/volume_keys_control_media_stream"
+                android:defaultValue="false"
+                android:summaryOn="@string/volume_keys_control_media_stream_on_summary"
+                android:summaryOff="@string/volume_keys_control_media_stream_off_summary" />
+
+		</PreferenceCategory>
+
 </PreferenceScreen>
