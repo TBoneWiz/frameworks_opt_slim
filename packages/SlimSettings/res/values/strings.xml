@@ -509,8 +509,15 @@
 
     <!-- Advanced media controls -->
     <string name="advanced_media_controls">Advanced media controls</string>
+
+    <!-- BT Absolute Volume Control -->
     <string name="bt_absolute_volume_control">BT Absolute volume control</string>
     <string name="bt_absolute_volume_control_on_summary">Volume keys control BT Absolute volume</string>
     <string name="bt_absolute_volume_control_off_summary">Volume keys control Media volume</string>
+
+    <!-- HDMI Volume Control -->
+    <string name="hdmi_volume_ctrl">Volume control for HDMI output (Reboot required to activate!)</string>
+    <string name="hdmi_volume_ctrl_on_summary">Volume buttons adjust HDMI output volume</string>
+    <string name="hdmi_volume_ctrl_off_summary">Volume buttons switch between Max volume and Mute</string>
 
 </resources>

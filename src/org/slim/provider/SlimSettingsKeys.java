@@ -570,6 +570,14 @@ public final class SlimSettingsKeys {
         public static final String
                 BT_ABS_VOLUME_CTRL_ENABLED = "bt_abs_vol_ctrl_enabled";
 
+        /**
+         * Setting to turn on HDMI Volume control.
+         *
+         * @hide
+         */
+        public static final String
+                HDMI_VOLUME_CTRL_ENABLED = "hdmi_volume_ctrl_enabled";
+
     }
 
 }

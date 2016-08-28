@@ -190,6 +190,13 @@
                 android:summaryOn="@string/bt_absolute_volume_control_on_summary"
                 android:summaryOff="@string/bt_absolute_volume_control_off_summary" />
 
+            <org.slim.preference.SlimGlobalSettingSwitchPreference
+                android:key="hdmi_volume_ctrl_enabled"
+                android:title="@string/hdmi_volume_ctrl"
+                android:defaultValue="false"
+                android:summaryOn="@string/hdmi_volume_ctrl_on_summary"
+                android:summaryOff="@string/hdmi_volume_ctrl_off_summary" />
+
 		</PreferenceCategory>
 
 </PreferenceScreen>
