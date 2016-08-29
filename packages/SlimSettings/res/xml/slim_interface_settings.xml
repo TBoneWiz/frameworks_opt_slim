@@ -38,4 +38,11 @@
             android:targetClass="com.android.systemui.tuner.TunerActivity$QsTunerActivity" />
     </PreferenceScreen>
 
+    <org.slim.preference.SlimSystemSettingSwitchPreference
+        android:key="qs_show_brightness_slider"
+        android:title="@string/qs_show_brightness_slider"
+        android:defaultValue="1"
+        android:summaryOn="@string/qs_show_brightness_on_summary"
+        android:summaryOff="@string/qs_show_brightness_off_summary" />
+
 </PreferenceScreen>
