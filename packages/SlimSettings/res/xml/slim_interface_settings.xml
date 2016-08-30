@@ -45,4 +45,11 @@
         android:summaryOn="@string/qs_show_brightness_on_summary"
         android:summaryOff="@string/qs_show_brightness_off_summary" />
 
+    <org.slim.preference.SlimSystemSettingSwitchPreference
+        android:key="qs_show_brightness_icon"
+        android:title="@string/qs_show_brightness_icon"
+        android:defaultValue="0"
+        android:summaryOn="@string/qs_show_brightness_icon_on_summary"
+        android:summaryOff="@string/qs_show_brightness_icon_off_summary" />
+
 </PreferenceScreen>

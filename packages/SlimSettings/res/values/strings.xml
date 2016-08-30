@@ -541,5 +541,8 @@
     <string name="qs_show_brightness_slider">Show brightness slider</string>
     <string name="qs_show_brightness_on_summary">Show brightness slider in Quick Settings</string>
     <string name="qs_show_brightness_off_summary">Hide brightness slider from Quick Settings</string>
+    <string name="qs_show_brightness_icon">Show brightness icon</string>
+    <string name="qs_show_brightness_icon_on_summary">Show brightness icon near brightness slider</string>
+    <string name="qs_show_brightness_icon_off_summary">Hide brightness icon</string>
 
 </resources>
