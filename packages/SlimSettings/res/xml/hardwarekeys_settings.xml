@@ -189,6 +189,7 @@
                 android:title="@string/volume_steps_title"
                 android:fragment="com.android.settings.slim.VolumeSteps" />
 
+            <!-- Bluetooth Absolute Volume control -->
             <org.slim.preference.SlimGlobalSettingSwitchPreference
                 android:key="bt_abs_vol_ctrl_enabled"
                 android:title="@string/bt_absolute_volume_control"
@@ -196,12 +197,21 @@
                 android:summaryOn="@string/bt_absolute_volume_control_on_summary"
                 android:summaryOff="@string/bt_absolute_volume_control_off_summary" />
 
+            <!-- HDMI Volume control -->
             <org.slim.preference.SlimGlobalSettingSwitchPreference
                 android:key="hdmi_volume_ctrl_enabled"
                 android:title="@string/hdmi_volume_ctrl"
                 android:defaultValue="false"
                 android:summaryOn="@string/hdmi_volume_ctrl_on_summary"
                 android:summaryOff="@string/hdmi_volume_ctrl_off_summary" />
+
+            <!-- Media Scanner boot behavior -->
+            <org.slim.preference.SlimSystemSettingSwitchPreference
+                android:key="media_scanner_on_boot"
+                android:title="@string/media_scanner_on_boot"
+                android:defaultValue="1"
+                android:summaryOn="@string/media_scanner_on_boot_on_summary"
+                android:summaryOff="@string/media_scanner_on_boot_off_summary" />
 
 		</PreferenceCategory>
 

@@ -545,4 +545,9 @@
     <string name="qs_show_brightness_icon_on_summary">Show brightness icon near brightness slider</string>
     <string name="qs_show_brightness_icon_off_summary">Hide brightness icon</string>
 
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot">MediaScanner behavior on boot</string>
+    <string name="media_scanner_on_boot_on_summary">Scan media (default)</string>
+    <string name="media_scanner_on_boot_off_summary">Do not scan media</string>
+
 </resources>
