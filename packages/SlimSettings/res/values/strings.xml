@@ -550,4 +550,13 @@
     <string name="media_scanner_on_boot_on_summary">Scan media (default)</string>
     <string name="media_scanner_on_boot_off_summary">Do not scan media</string>
 
-</resources>
+   <!-- Display Rotation -->
+    <string name="display_rotation_title">Screen Rotation</string>
+    <string name="accelerometer_title">Auto-rotate screen</string>
+    <string name="display_rotation_category_title">Rotation modes</string>
+    <string name="display_rotation_0_title">0 degrees</string>
+    <string name="display_rotation_90_title">90 degrees</string>
+    <string name="display_rotation_180_title">180 degrees</string>
+    <string name="display_rotation_270_title">270 degrees</string>
+   
+ </resources>
