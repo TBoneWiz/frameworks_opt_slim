@@ -547,6 +547,13 @@ public final class SlimSettingsKeys {
          */
         public static final String ACCELEROMETER_ROTATION_ANGLES = "accelerometer_rotation_angles";
 
+        /**
+         * Haptic feedback for QS Tiles
+         *
+         * @hide
+         */
+        public static final String VIBRATE_ON_QS_TILES = "vibrate_on_qs_tiles";
+
     }
 
     public interface Secure {

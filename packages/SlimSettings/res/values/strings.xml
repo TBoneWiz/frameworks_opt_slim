@@ -558,5 +558,9 @@
     <string name="display_rotation_90_title">90 degrees</string>
     <string name="display_rotation_180_title">180 degrees</string>
     <string name="display_rotation_270_title">270 degrees</string>
+
+    <!-- Haptic feedback for Quick Settings -->
+    <string name="vibrate_on_qs_tiles">Quick Settings haptic feedback</string>
+    <string name="vibrate_on_qs_tiles_summary">Enable haptic feedback in Quick Settings</string>
    
- </resources>
+</resources>

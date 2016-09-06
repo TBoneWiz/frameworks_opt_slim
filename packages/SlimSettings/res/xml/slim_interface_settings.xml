@@ -45,6 +45,12 @@
     </PreferenceScreen>
 
     <org.slim.preference.SlimSystemSettingSwitchPreference
+        android:key="vibrate_on_qs_tiles"
+        android:title="@string/vibrate_on_qs_tiles"
+        android:defaultValue="0"
+        android:summary="@string/vibrate_on_qs_tiles_summary" />
+
+    <org.slim.preference.SlimSystemSettingSwitchPreference
         android:key="qs_show_brightness_slider"
         android:title="@string/qs_show_brightness_slider"
         android:defaultValue="1"
