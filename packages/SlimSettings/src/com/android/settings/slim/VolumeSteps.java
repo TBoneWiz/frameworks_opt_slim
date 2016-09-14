@@ -36,6 +36,7 @@ import android.util.Log;
 import org.slim.framework.internal.logging.SlimMetricsLogger;
 
 import com.slim.settings.R;
+import org.slim.provider.SlimSettings;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class VolumeSteps extends SettingsPreferenceFragment implements
@@ -190,6 +191,16 @@ public class VolumeSteps extends SettingsPreferenceFragment implements
         Settings.System.putInt(getContentResolver(), pref.getKey(), steps);
         mAudioManager.setStreamMaxVolume(volume_map.get(pref.getKey()), steps);
         updateVolumeStepPrefs(pref, steps);
+        if (volume_map.get(pref.getKey()) == AudioManager.STREAM_MUSIC) {
+            if (SlimSettings.System.getInt(getActivity().getContentResolver(), 
+                        SlimSettings.System.STREAM_VOLUME_STEPS_CHANGED, 0) != 0) {
+               SlimSettings.System.putInt(getActivity().getContentResolver(), 
+                        SlimSettings.System.STREAM_VOLUME_STEPS_CHANGED, 0);
+            } else {
+               SlimSettings.System.putInt(getActivity().getContentResolver(),
+                        SlimSettings.System.STREAM_VOLUME_STEPS_CHANGED, 1);
+            }
+        }
         Log.i(TAG, "Volume steps:" + pref.getKey() + "" + String.valueOf(steps));
     }
 }

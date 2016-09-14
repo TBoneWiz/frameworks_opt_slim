@@ -508,7 +508,7 @@
     <string name="swap_volume_buttons_summary">Swap volume buttons when screen is rotated</string>
 
     <!-- Advanced media controls -->
-    <string name="advanced_media_controls">Advanced media controls</string>
+    <string name="advanced_media_controls">Advanced Options</string>
 
     <!-- BT Absolute Volume Control -->
     <string name="bt_absolute_volume_control">BT Absolute volume control</string>
@@ -563,4 +563,32 @@
     <string name="vibrate_on_qs_tiles">Quick Settings haptic feedback</string>
     <string name="vibrate_on_qs_tiles_summary">Enable haptic feedback in Quick Settings</string>
    
+    <!-- Safe headset volume -->
+    <string name="safe_headset_volume_title">Safe headset volume</string>
+    <string name="safe_headset_volume_summary">Prevent high volume levels when headset is plugged in</string>
+    <string name="safe_headset_volume_warning_dialog_text">Listening at high volume may damage your hearing. Disable with caution.</string>
+
+    <!-- Sound settings -->
+    <string name="advanced_sound_title">Advanced Media Controls</string>
+
+    <!-- Annoying Notifications -->
+    <string name="notifications_category_title">Notifications</string>
+    <string name="less_notification_sounds_title">Less frequent notification sounds</string>
+    <string name="less_notification_sounds_summary">Notification sounds of each app will play once per set time period</string>
+    <string name="less_notification_sounds_default">Default Behaviour</string>
+    <string name="less_notification_sounds_3s">3 seconds</string>
+    <string name="less_notification_sounds_5s">5 seconds</string>
+    <string name="less_notification_sounds_10s">10 seconds</string>
+    <string name="less_notification_sounds_15s">15 seconds</string>
+    <string name="less_notification_sounds_30s">30 seconds</string>
+    <string name="less_notification_sounds_45s">45 seconds</string>
+    <string name="less_notification_sounds_1m">1 minute</string>
+    <string name="less_notification_sounds_2m">2 minutes</string>
+    <string name="less_notification_sounds_5m">5 minutes</string>
+
+    <!-- Manage applications, individual application screen, confirmation dialog buttons. -->
+    <string name="attention">Attention!</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">Cancel</string>
+
 </resources>

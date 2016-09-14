@@ -554,6 +554,22 @@ public final class SlimSettingsKeys {
          */
         public static final String VIBRATE_ON_QS_TILES = "vibrate_on_qs_tiles";
 
+        /**
+         * Whether to prevent loud volume levels when headset is first plugged in.
+         * @hide
+         */
+        public static final String SAFE_HEADSET_VOLUME = "safe_headset_volume";
+
+        /**
+         * @hide
+         */
+        public static final String STREAM_VOLUME_STEPS_CHANGED = "stream_volume_steps_changed";
+
+	/**
+         * Whether to mute annoying notifications
+         * @hide
+         */
+        public static final String MUTE_ANNOYING_NOTIFICATIONS_THRESHOLD = "mute_annoying_notifications_threshold";
     }
 
     public interface Secure {

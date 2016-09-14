@@ -177,17 +177,17 @@
                 android:defaultValue="false"
                 android:summary="@string/swap_volume_buttons_summary" />
 
-		</PreferenceCategory>
+	</PreferenceCategory>
 
         <PreferenceCategory
             android:key="advanced_media_controls"
             android:title="@string/advanced_media_controls">
 
-            <!-- Volume Steps -->
+            <!-- Advanced Sound settings -->
             <PreferenceScreen
-                android:key="volume_steps"
-                android:title="@string/volume_steps_title"
-                android:fragment="com.android.settings.slim.VolumeSteps" />
+                android:key="adv_sound_settings"
+                android:title="@string/advanced_sound_title"
+                android:fragment="com.android.settings.slim.SoundSettings" />
 
             <!-- Bluetooth Absolute Volume control -->
             <org.slim.preference.SlimGlobalSettingSwitchPreference
@@ -213,6 +213,6 @@
                 android:summaryOn="@string/media_scanner_on_boot_on_summary"
                 android:summaryOff="@string/media_scanner_on_boot_off_summary" />
 
-		</PreferenceCategory>
+	</PreferenceCategory>
 
 </PreferenceScreen>
