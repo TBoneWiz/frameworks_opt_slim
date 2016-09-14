@@ -44,24 +44,15 @@
 
     </PreferenceScreen>
 
-    <org.slim.preference.SlimSystemSettingSwitchPreference
-        android:key="vibrate_on_qs_tiles"
-        android:title="@string/vibrate_on_qs_tiles"
-        android:defaultValue="0"
-        android:summary="@string/vibrate_on_qs_tiles_summary" />
+    <PreferenceScreen
+            android:key="qs_options"
+            android:title="@string/qs_options_title"
+            android:fragment="com.android.settings.slim.QsOptions" />
 
-    <org.slim.preference.SlimSystemSettingSwitchPreference
-        android:key="qs_show_brightness_slider"
-        android:title="@string/qs_show_brightness_slider"
-        android:defaultValue="1"
-        android:summaryOn="@string/qs_show_brightness_on_summary"
-        android:summaryOff="@string/qs_show_brightness_off_summary" />
-
-    <org.slim.preference.SlimSystemSettingSwitchPreference
-        android:key="qs_show_brightness_icon"
-        android:title="@string/qs_show_brightness_icon"
-        android:defaultValue="0"
-        android:summaryOn="@string/qs_show_brightness_icon_on_summary"
-        android:summaryOff="@string/qs_show_brightness_icon_off_summary" />
+    <!-- Advanced Media settings -->
+    <PreferenceScreen
+        android:key="adv_sound_settings"
+        android:title="@string/advanced_sound_title"
+        android:fragment="com.android.settings.slim.SoundSettings" />
 
 </PreferenceScreen>

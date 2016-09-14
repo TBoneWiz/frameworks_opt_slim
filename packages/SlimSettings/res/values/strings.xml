@@ -23,10 +23,11 @@
 
     <!-- Slim settings screens -->
     <string name="navigation_settings_title">Navigation</string>
-    <string name="interface_settings_title">Interface</string>
+    <string name="interface_settings_title">System Tuner</string>
     <string name="advanced_settings">Advanced</string>
 
-    <string name="quick_settings">Quick Settings</string>
+    <string name="quick_settings">Quick Settings Tiles</string>
+    <string name="qs_options_title">Quick Settings Options</string>
     <string name="status_bar_icons">Status bar icons</string>
 
     <!-- Navigation settings -->
@@ -507,9 +508,6 @@
     <string name="swap_volume_buttons_title">Swap volume buttons</string>
     <string name="swap_volume_buttons_summary">Swap volume buttons when screen is rotated</string>
 
-    <!-- Advanced media controls -->
-    <string name="advanced_media_controls">Advanced Options</string>
-
     <!-- BT Absolute Volume Control -->
     <string name="bt_absolute_volume_control">BT Absolute volume control</string>
     <string name="bt_absolute_volume_control_on_summary">Volume keys control BT Absolute volume</string>
@@ -569,7 +567,7 @@
     <string name="safe_headset_volume_warning_dialog_text">Listening at high volume may damage your hearing. Disable with caution.</string>
 
     <!-- Sound settings -->
-    <string name="advanced_sound_title">Advanced Media Controls</string>
+    <string name="advanced_sound_title">Advanced Media settings</string>
 
     <!-- Annoying Notifications -->
     <string name="notifications_category_title">Notifications</string>
