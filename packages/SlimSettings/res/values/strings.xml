@@ -589,4 +589,14 @@
     <string name="dlg_ok">OK</string>
     <string name="dlg_cancel">Cancel</string>
 
+    <!-- Clear all recents button -->
+    <string name="show_clear_all_title">Clear All Button</string>
+    <string name="show_clear_all_on_summary">Show Clear All button</string>
+    <string name="show_clear_all_off_summary">Hide Clear All button</string>
+    <string name="recents_clear_all_location_title">Clear All button location</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+
 </resources>

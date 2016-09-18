@@ -80,4 +80,18 @@
             android:defaultValue="0x00ffffff"
             alphaSlider="true" />
 
+        <SwitchPreference
+            android:key="show_clear_all_recents"
+            android:title="@string/show_clear_all_title"
+            android:summaryOn="@string/show_clear_all_on_summary"
+            android:summaryOff="@string/show_clear_all_off_summary"
+            android:defaultValue="true" />
+        
+        <ListPreference
+            android:key="recents_clear_all_location"
+            android:title="@string/recents_clear_all_location_title"
+            android:entries="@array/recents_clear_all_location_entries"
+            android:entryValues="@array/recents_clear_all_location_values"
+            android:dependency="show_clear_all_recents" />
+
 </PreferenceScreen>

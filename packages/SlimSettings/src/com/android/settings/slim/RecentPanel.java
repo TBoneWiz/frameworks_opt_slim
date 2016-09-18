@@ -72,6 +72,9 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
     private static final String RECENT_CARD_TEXT_COLOR =
             "recent_card_text_color";
 
+    private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+
     private SwitchPreference mUseSlimRecents;
     private SwitchPreference mShowRunningTasks;
     private SlimSeekBarPreference mMaxApps;
@@ -82,6 +85,9 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
     private ColorPickerPreference mRecentPanelBgColor;
     private ColorPickerPreference mRecentCardBgColor;
     private ColorPickerPreference mRecentCardTextColor;
+
+    private SwitchPreference mRecentsClearAll;
+    private ListPreference mRecentsClearAllLocation;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
@@ -102,6 +108,15 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         if (preference == mUseSlimRecents) {
             SlimSettings.System.putInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS,
                     ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mRecentsClearAll) {
+            SlimSettings.System.putInt(getContentResolver(), SlimSettings.System.SHOW_CLEAR_ALL_RECENTS,
+                    ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mRecentsClearAllLocation) {
+            int value = Integer.parseInt((String) newValue);
+            SlimSettings.System.putInt(getActivity().getContentResolver(),
+                    SlimSettings.System.RECENTS_CLEAR_ALL_LOCATION, value);
             return true;
         } else if (preference == mShowRunningTasks) {
             SlimSettings.System.putInt(getContentResolver(),
@@ -240,6 +255,10 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         final int recentExpandedMode = SlimSettings.System.getInt(getContentResolver(),
                 SlimSettings.System.RECENT_PANEL_EXPANDED_MODE, 0);
         mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
+
+        final int recentsClearAllLocation = SlimSettings.System.getInt(getContentResolver(),
+                SlimSettings.System.RECENTS_CLEAR_ALL_LOCATION, 2);
+        mRecentsClearAllLocation.setValue(recentsClearAllLocation + "");
     }
 
     private void initializeAllPreferences() {
@@ -324,6 +343,10 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
+
+        mRecentsClearAllLocation =
+                (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
     }
 
 }
