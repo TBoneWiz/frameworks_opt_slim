@@ -265,6 +265,9 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         mUseSlimRecents = (SwitchPreference) findPreference(USE_SLIM_RECENTS);
         mUseSlimRecents.setOnPreferenceChangeListener(this);
 
+        mRecentsClearAll = (SwitchPreference) findPreference(SHOW_CLEAR_ALL_RECENTS);
+        mRecentsClearAll.setOnPreferenceChangeListener(this);
+
         mShowRunningTasks = (SwitchPreference) findPreference(ONLY_SHOW_RUNNING_TASKS);
         mShowRunningTasks.setOnPreferenceChangeListener(this);
 
