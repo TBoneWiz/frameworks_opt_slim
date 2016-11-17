@@ -582,6 +582,12 @@ public final class SlimSettingsKeys {
          * @hide
          */
         public static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+
+        /**
+         * Open only the focused task in AOSP multiwindow
+         *  @hide
+         */
+        public static final String MULTIWINDOW_SINGLE_TASK = "multiwindow_single_task";
     }
 
     public interface Secure {

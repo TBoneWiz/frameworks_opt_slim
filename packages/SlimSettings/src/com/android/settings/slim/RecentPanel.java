@@ -74,6 +74,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
     private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private static final String MULTIWINDOW_SINGLE_TASK = "multiwindow_single_task";
 
     private SwitchPreference mUseSlimRecents;
     private SwitchPreference mShowRunningTasks;
@@ -88,6 +89,7 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;
+    private SwitchPreference mMultiwindowSingleTask;
 
     private static final int MENU_RESET = Menu.FIRST;
     private static final int DEFAULT_BACKGROUND_COLOR = 0x00ffffff;
@@ -117,6 +119,10 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
             int value = Integer.parseInt((String) newValue);
             SlimSettings.System.putInt(getActivity().getContentResolver(),
                     SlimSettings.System.RECENTS_CLEAR_ALL_LOCATION, value);
+            return true;
+        } else if (preference == mMultiwindowSingleTask) {
+            SlimSettings.System.putInt(getContentResolver(), SlimSettings.System.MULTIWINDOW_SINGLE_TASK,
+                    ((Boolean) newValue) ? 1 : 0);
             return true;
         } else if (preference == mShowRunningTasks) {
             SlimSettings.System.putInt(getContentResolver(),
@@ -267,6 +273,9 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
         mRecentsClearAll = (SwitchPreference) findPreference(SHOW_CLEAR_ALL_RECENTS);
         mRecentsClearAll.setOnPreferenceChangeListener(this);
+
+        mMultiwindowSingleTask = (SwitchPreference) findPreference(MULTIWINDOW_SINGLE_TASK);
+        mMultiwindowSingleTask.setOnPreferenceChangeListener(this);
 
         mShowRunningTasks = (SwitchPreference) findPreference(ONLY_SHOW_RUNNING_TASKS);
         mShowRunningTasks.setOnPreferenceChangeListener(this);

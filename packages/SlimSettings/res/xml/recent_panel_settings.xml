@@ -94,4 +94,11 @@
             android:entryValues="@array/recents_clear_all_location_values"
             android:dependency="show_clear_all_recents" />
 
+        <SwitchPreference
+            android:key="multiwindow_single_task"
+            android:title="@string/multiwindow_single_task"
+            android:summaryOn="@string/multiwindow_single_task_on_summary"
+            android:summaryOff="@string/show_clear_all_off_summary"
+            android:defaultValue="false" />
+        
 </PreferenceScreen>
