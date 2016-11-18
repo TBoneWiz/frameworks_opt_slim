@@ -110,6 +110,16 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         if (preference == mUseSlimRecents) {
             SlimSettings.System.putInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS,
                     ((Boolean) newValue) ? 1 : 0);
+            if (SlimSettings.System.getInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS, 1) == 0) {
+                mRecentsClearAll.setEnabled(true);
+                mRecentsClearAllLocation.setEnabled(true);
+                mMultiwindowSingleTask.setEnabled(true);
+            }
+            else {
+                mRecentsClearAll.setEnabled(false);
+                mRecentsClearAllLocation.setEnabled(false);
+                mMultiwindowSingleTask.setEnabled(false);
+            }
             return true;
         } else if (preference == mRecentsClearAll) {
             SlimSettings.System.putInt(getContentResolver(), SlimSettings.System.SHOW_CLEAR_ALL_RECENTS,
@@ -272,10 +282,17 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         mUseSlimRecents.setOnPreferenceChangeListener(this);
 
         mRecentsClearAll = (SwitchPreference) findPreference(SHOW_CLEAR_ALL_RECENTS);
-        mRecentsClearAll.setOnPreferenceChangeListener(this);
-
         mMultiwindowSingleTask = (SwitchPreference) findPreference(MULTIWINDOW_SINGLE_TASK);
-        mMultiwindowSingleTask.setOnPreferenceChangeListener(this);
+
+        if (SlimSettings.System.getInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS, 1) == 1) {
+            mRecentsClearAll.setEnabled(false);
+            mRecentsClearAllLocation.setEnabled(false);
+            mMultiwindowSingleTask.setEnabled(false);
+        }
+        else {
+            mRecentsClearAll.setOnPreferenceChangeListener(this);
+            mMultiwindowSingleTask.setOnPreferenceChangeListener(this);
+        }
 
         mShowRunningTasks = (SwitchPreference) findPreference(ONLY_SHOW_RUNNING_TASKS);
         mShowRunningTasks.setOnPreferenceChangeListener(this);

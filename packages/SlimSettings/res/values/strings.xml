@@ -600,7 +600,7 @@
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
 
     <!-- Multiwindow single task -->
-    <string name="multiwindow_single_task">AOSP Multiwindow behavior</string>
+    <string name="multiwindow_single_task">MultiWindow behavior</string>
     <string name="multiwindow_single_task_on_summary">Open focused task only</string>
     <string name="multiwindow_single_task_off_summary">Default (Open 2 or 4 recent apps)</string>
 </resources>
