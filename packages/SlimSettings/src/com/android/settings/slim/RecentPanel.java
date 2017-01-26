@@ -112,12 +112,10 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
                     ((Boolean) newValue) ? 1 : 0);
             if (SlimSettings.System.getInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS, 1) == 0) {
                 mRecentsClearAll.setEnabled(true);
-                mRecentsClearAllLocation.setEnabled(true);
                 mMultiwindowSingleTask.setEnabled(true);
             }
             else {
                 mRecentsClearAll.setEnabled(false);
-                mRecentsClearAllLocation.setEnabled(false);
                 mMultiwindowSingleTask.setEnabled(false);
             }
             return true;
@@ -286,7 +284,6 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
         if (SlimSettings.System.getInt(getContentResolver(), SlimSettings.System.USE_SLIM_RECENTS, 1) == 1) {
             mRecentsClearAll.setEnabled(false);
-            mRecentsClearAllLocation.setEnabled(false);
             mMultiwindowSingleTask.setEnabled(false);
         }
         else {
