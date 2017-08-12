@@ -603,4 +603,11 @@
     <string name="multiwindow_single_task">MultiWindow behavior</string>
     <string name="multiwindow_single_task_on_summary">Open focused task only</string>
     <string name="multiwindow_single_task_off_summary">Default (Open 2 or 4 recent apps)</string>
+
+    <!-- LockScreen Shortcuts -->
+    <string name="ls_options_title">LockScreen Shortcuts</string>
+    <string name="left_shortcut">Left Shortcut</string>
+    <string name="right_shortcut">Right Shortcut</string>
+    <string name="shortcut_on_summary">Visible</string>
+    <string name="shortcut_off_summary">Hidden</string>
 </resources>

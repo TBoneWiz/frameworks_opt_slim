@@ -520,6 +520,18 @@ public final class SlimSettingsKeys {
          */
         public static final String QS_SHOW_BRIGHTNESS_SLIDER = "qs_show_brightness_slider";
 
+        /** Whether to show left shortcut on lockscreen.
+         *
+         * @hide
+         */
+        public static final String LS_SHOW_LEFT_SHORTCUT = "ls_show_left_shortcut";
+
+        /** Whether to show right shortcut on lockscreen.
+         *
+         * @hide
+         */
+        public static final String LS_SHOW_RIGHT_SHORTCUT = "ls_show_right_shortcut";
+
          /**
          * Whether to show Brightness Icon On Brightness Slider
          * @hide
