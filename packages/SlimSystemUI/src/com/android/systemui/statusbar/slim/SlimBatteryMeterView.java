@@ -284,7 +284,7 @@ public class SlimBatteryMeterView extends View implements DemoMode,
     @Override
     public void onBatteryLevelChanged(int level, boolean pluggedIn, boolean charging) {
         if (mDemoMode) return;
-        mCharging = pluggedIn || charging;
+        mCharging = charging;
         mLevel = level;
         synchronized (mLock) {
             if (mBatteryMeterDrawable != null) {
